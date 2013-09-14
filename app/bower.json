@@ -2,9 +2,11 @@
   "name": "Cassette",
   "version": "1.0.0",
   "dependencies": {
-    "modernizr": "latest",
+    "backbone-amd": "latest",
+    "handlebars": "latest",
     "jquery": "latest",
-    "underscore-amd": "latest",
-    "backbone-amd": "latest"
+    "modernizr": "latest",
+    "requirejs": "latest",
+    "underscore-amd": "latest"
   }
 }
