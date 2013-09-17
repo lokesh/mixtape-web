@@ -1,4 +1,6 @@
+# -------------------------
 # Configuration for Compass
+# -------------------------
 environment = :development # or :production
 
 preferred_syntax = :sass

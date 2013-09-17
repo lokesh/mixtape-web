@@ -1,0 +1,14 @@
+*.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+*.sassc
+*.scssc
+
+Rakefile
+rsync-exclude
+
+*.log
+*.sql
+*.sqlite

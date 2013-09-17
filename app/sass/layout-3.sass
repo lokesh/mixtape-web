@@ -1,0 +1,38 @@
+@import base
+
+body
+  color: white
+  background-color: $darkGray
+  font-family: "Open Sans", sans-serif
+  font-weight: 300
+  font-size: 16px
+
+.app
+  position: relative
+  overflow: hidden
+
+.playlist
+  position: absolute
+  overflow-y: scroll
+  +transition(left .3s cubic-bezier(0.5, 0.9, 0.7, 1.05))
+
+.playlist-name
+  display: none
+
+.track
+  padding: 20px
+  background-color: $darkGray
+  border-top: 1px solid rgba(0, 0, 0, 0.1)
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  &:hover
+    border-top-color: rgba(0, 0, 0, 0.5)
+    border-bottom-color: rgba(0, 0, 0, 0.5)
+    cursor: pointer
+
+.track-name
+  font-size: 30px
+  line-height: 1.3em
+  +ellipsis
+
+.track-artist
+  +ellipsis

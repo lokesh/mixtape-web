@@ -1,8 +1,44 @@
 @import base
 
 body
-  color: $darkGray
-  background: $lightGray
+  color: white
   font-family: "Open Sans", sans-serif
   font-weight: 300
   font-size: 36px
+
+.app
+  position: relative
+  overflow: hidden
+
+.playlist
+  position: absolute
+  overflow-y: scroll
+  +transition(all .3s cubic-bezier(0.5, 0.9, 0.7, 1.10))
+
+.playlist-name
+  display: none
+
+.track
+  padding: 20px
+  &:nth-child(6n)
+    background-color: $red
+  &:nth-child(6n + 1)
+    background-color: $orange
+  &:nth-child(6n + 2)
+    background-color: $yellow
+  &:nth-child(6n + 3)
+    background-color: $green
+  &:nth-child(6n + 4)
+    background-color: $blue
+  &:nth-child(6n + 5)
+    background-color: $purple
+
+.track-name
+  font-size: 40px
+  line-height: 1.2em
+  +ellipsis
+
+.track-artist
+  font-size: 20px
+  +ellipsis
+
