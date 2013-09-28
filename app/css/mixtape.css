@@ -1,0 +1,162 @@
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 3, ../sass/mixtape.sass */
+body {
+  color: white;
+  background-color: #333333;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+/* line 10, ../sass/mixtape.sass */
+.app {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 14, ../sass/mixtape.sass */
+.new-playlist-button {
+  position: absolute;
+  padding: 20px;
+  color: #333333;
+  background: white;
+  font-size: 40px;
+  -webkit-transition: top 0.5s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 0.2s;
+  -moz-transition: top 0.5s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 0.2s;
+  -o-transition: top 0.5s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 0.2s;
+  transition: top 0.5s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 0.2s;
+}
+/* line 21, ../sass/mixtape.sass */
+.new-playlist-button:hover {
+  cursor: pointer;
+}
+
+/* line 24, ../sass/mixtape.sass */
+.playlists-view {
+  position: relative;
+}
+
+/* line 27, ../sass/mixtape.sass */
+.playlist {
+  position: absolute;
+  -webkit-transition: left 0.6s cubic-bezier(0.5, 0.9, 0.7, 1.05), top 0.4s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 0.2s;
+  -moz-transition: left 0.6s cubic-bezier(0.5, 0.9, 0.7, 1.05), top 0.4s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 0.2s;
+  -o-transition: left 0.6s cubic-bezier(0.5, 0.9, 0.7, 1.05), top 0.4s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 0.2s;
+  transition: left 0.6s cubic-bezier(0.5, 0.9, 0.7, 1.05), top 0.4s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 0.2s;
+}
+/* line 31, ../sass/mixtape.sass */
+.playlist:hover {
+  cursor: pointer;
+}
+
+/* line 34, ../sass/mixtape.sass */
+.playlist-name {
+  padding: 20px;
+  font-size: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* line 39, ../sass/mixtape.sass */
+.track {
+  position: relative;
+}
+
+/* line 42, ../sass/mixtape.sass */
+.track {
+  position: absolute;
+  padding: 20px;
+  opacity: 0;
+  -webkit-transition: top 0.2s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 1s;
+  -moz-transition: top 0.2s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 1s;
+  -o-transition: top 0.2s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 1s;
+  transition: top 0.2s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 1s;
+}
+
+/* line 48, ../sass/mixtape.sass */
+.track-name {
+  font-size: 30px;
+  line-height: 1.35em;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* line 53, ../sass/mixtape.sass */
+.track-artist {
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
