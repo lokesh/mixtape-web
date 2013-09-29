@@ -1,55 +1,81 @@
-@import base
+@import compass/reset
+@import compass/css3
+@import compass/utilities
+@import ../bower_components/components-font-awesome/scss/font-awesome
+
+// Colors
+$red: #ec5757
+$orange: #ff7c4f
+$yellow: #ffd366
+$green: #43b364
+$blue: #2da5c4
+$purple: #a083c8
+
+$offWhite: #f7f7f7
+$lightGray: #ccc
+$gray: #666
+$darkGray: #444
+
+$color: $darkGray
+$tintColor: $green
+$bgColor: $offWhite
+$borderColor: lighten($lightGray, 10%)
+
+// Fonts
+// We're using Open Sans hosted by Google Fonts with the following weights:
+// * 300 Light
+// * 400 Normal
+// * 600 Semi-bold
+// * 700 Bold
+// * 800 Extra-bold
+
+// Layout
+$gutter: 20px
+$radius: 2px
+
+// -----------------------------------------------------------------------
+
+*
+  +box-sizing(border-box)
 
 body
-  color: white
-  background-color: $darkGray
+  background-color: $bgColor
+  color: $color
+
+body,
+button,
+input
   font-family: "Open Sans", sans-serif
   font-weight: 300
-  font-size: 16px
+  font-size: 24px
 
-.app
-  position: relative
-  overflow: hidden
+a
+  color: $green
+  text-decoration: none
 
-.new-playlist-button
-  position: absolute
-  padding: 20px
-  color: $darkGray
-  background: white
-  font-size: 40px
-  +transition(top .5s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 0.2s)
-  &:hover
-    cursor: pointer
 
-.playlists-view
-  position: relative
+/* Tapes Header */
 
-.playlist
-  position: absolute
-  // +box-sizing(border-box)
-  +transition(left .6s cubic-bezier(0.5, 0.9, 0.7, 1.05), top .4s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 0.2s)
-  &:hover
-    cursor: pointer
+.tapes-header
+  height: 50px
+  line-height: 50px
+  color: white
+  background: $blue
+  text-align: center
 
-.playlist-name
-  padding: 20px
-  font-size: 40px
-  +ellipsis
+/* Tapes List */
 
-.track
-  position: relative
-
-.track
-  position: absolute
-  padding: 20px
-  opacity: 0
-  +transition(top .2s cubic-bezier(0.5, 0.9, 0.7, 1.05), opacity 1s)
-
-.track-name
-  font-size: 30px
-  line-height: 1.35em
-  +ellipsis
-
-.track-artist
-  font-size: 20px
-  +ellipsis
+.tapes-list
+  padding: $gutter/4 0 0 $gutter/4
+  .tape
+    float: left
+    width: 25%
+    min-width: 320px
+    height: 100px
+    line-height: 100px
+    margin: 0 $gutter/4 $gutter/4 0
+    background-color: $yellow
+    font-size: 36px
+    text-align: center
+    &:hover
+      cursor: pointer

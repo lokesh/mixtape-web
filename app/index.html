@@ -11,63 +11,41 @@
   </head>
   <body>
 
+    <div id="app" class="app">
+      <section id="header" class="header">
+        Mixtape
+      </section>
+      <section id="content" class="content"></section>
+    </div>
 
-    <div id="app" class="app"></div>
-    
-    <script id="playlist-template" type="text/x-handlebars-template">
-      <article id="{{key}}" class="playlist">
-        <div class="playlist-name">
-          {{name}}
-        </div>
-        <div class="playlist-tracks"></div>
-      </article>
+    <script id="tapes-list-template" type="text/template">
+      <div class="tapes-list">
+      </div>
     </script>
 
-    <script id="track-template" type="text/x-handlebars-template">
-      <article id="{{key}}" class="track">
-        <div class="track-name">
-          {{name}}
-        </div>
-        <div class="track-artist">
-          {{artist}}
-        </div>
-      </article>
+    <script id="tape-screamer-template" type="text/template">
+      <header id="tape-list-screamer-<%= key %>" class="tape-screamer">
+        <h1 class="playlist-name">
+          <%= name %>
+        </h1>
+      </header>
     </script>
     
-    <script id="workspace-template" type="text/html">
-      <section id="toolbar" class="toolbar">
-        <section id="sources" class="sources"></section>
-        <section id="filters" class="filters"></section>
-        <section id="commands" class="commands"></section>
-      </section>
-      <section id="editor" class="editor">
-        Test
-      </section>
+    <script id="tape-template" type="text/template">
+      Tape
     </script>
 
-    <script id="sources-template" type="text/html">
-      <div class="panel">
-        <h2 class="panel-heading">Sources</h2>
-        <button class="btn full">Upload1</button>
-        <button class="btn full">Webcam</button>
-      </div>
+    <script id="tracks-template" type="text/template">
+      Tracks
+    </script>    
+
+    <script id="track-template" type="text/template">
+      Track
     </script>
 
-    <script id="filters-template" type="text/html">
-      <div class="panel">
-        <h2 class="panel-heading">Filters</h2>
-        <button class="btn full">Blur</button>
-        <button class="btn full">Grayscale</button>
-      </div>
+    <script id="new-tape-template" type="text/template">
+      New Tape
     </script>
-
-    <script id="commands-template" type="text/html">
-      <div class="panel">
-        <h2 class="panel-heading">Commands</h2>
-        <button class="btn full">Find edges</button>
-      </div>
-    </script>
-
 
     <script data-main="js/main" src="bower_components/requirejs/require.js"></script>
   </body>

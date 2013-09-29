@@ -9,13 +9,23 @@ require.config({
     'backbone.wreqr' : '../bower_components/backbone.wreqr/lib/amd/backbone.wreqr',
     'backbone.eventbinder' : '../bower_components/backbone.eventbinder/lib/amd/backbone.eventbinder',
     'backbone.babysitter' : '../bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
-    'handlebars': '../bower_components/handlebars/handlebars'
+    'localstorage' : '../bower_components/backbone.localStorage/backbone.localStorage'
   }
 });
 
-require(['app'], function(app) {
+require([
+  'app',
+  'backbone',
+  'router',
+  'controller'
+  ], function(app, Backbone, Router, Controller) {
   'use strict';
 
   app.start();
+  
+  // new Router({ controller: Controller });
 
+  Backbone.history.start();
+
+  // console.log('App start');
 });

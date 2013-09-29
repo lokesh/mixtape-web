@@ -10,7 +10,6 @@
     "backbone.wreqr": "latest",
     "backbone.eventbinder": "latest",
     "backbone.babysitter": "latest",
-    "backbone.localStorage": "latest",
     "modernizr": "latest",
     "requirejs": "latest",
     "requirejs-text": "latest",
