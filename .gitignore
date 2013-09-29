@@ -13,3 +13,7 @@ rsync-exclude
 *.log
 *.sql
 *.sqlite
+
+.grunt/
+node_modules
+bower_components
