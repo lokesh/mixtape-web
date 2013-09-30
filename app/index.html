@@ -12,38 +12,46 @@
   <body>
 
     <div id="app" class="app">
-      <section id="header" class="header">
+      <section class="app-header">
         Mixtape
       </section>
-      <section id="content" class="content"></section>
+      <section class="app-content"></section>
     </div>
 
-    <script id="tapes-list-template" type="text/template">
-      <div class="tapes-list">
+    <script id="tapes-browse-template" type="text/template">
+      <div class="tapes-browse">
+        <button class="new-tape-button">+</button>
+        <span class="tapes-list"></span>
       </div>
     </script>
 
-    <script id="tape-screamer-template" type="text/template">
-      <header id="tape-list-screamer-<%= key %>" class="tape-screamer">
-        <h1 class="playlist-name">
-          <%= name %>
-        </h1>
-      </header>
+    <script id="tape-banner-template" type="text/template">
+      <h1 class="tape-banner">
+        <%= name %>
+      </h1>
     </script>
     
     <script id="tape-template" type="text/template">
-      Tape
+      <article class="tape">
+        <h1 class="tape-banner">
+          <%= name %>
+        </h1>
+        <section class="tracks"></section>
+      </article>
     </script>
-
-    <script id="tracks-template" type="text/template">
-      Tracks
-    </script>    
 
     <script id="track-template" type="text/template">
-      Track
+      <div class="track">
+        <h2 class="track-name">
+          <%= name %>
+        </h2>
+        <h3 class="track-artist">
+          <%= artist %>
+        </h3>
+      </div>
     </script>
 
-    <script id="new-tape-template" type="text/template">
+    <script id="tape-new-template" type="text/template">
       New Tape
     </script>
 

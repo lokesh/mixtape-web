@@ -1,8 +1,9 @@
-define(['marionette'], function (Marionette) {
+define(['marionette', 'views/track'], function (Marionette, TrackView) {
+  
   'use strict';
   
-  return Backbone.Marionette.ItemView.extend({
-    template: '#tracks-template'
+  return Backbone.Marionette.CollectionView.extend({
+     itemView: TrackView
   });
 
 });

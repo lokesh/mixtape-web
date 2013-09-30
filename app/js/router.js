@@ -1,18 +1,14 @@
-define(['marionette', 'controller'], function (marionette, Controller) {
+define(['backbone', 'marionette'], function (Backbone, Marionette) {
+
   'use strict';
 
   return Backbone.Marionette.AppRouter.extend({
-    // "someMethod" must exist at controller.someMethod
+   
+    // Methods for handling routing are in controller.js
     appRoutes: {
-      "some/route": "someMethod"
-    },
-
-    /* standard routes can be mixed with appRoutes/Controllers above */
-    routes : {
-      "some/otherRoute" : "someOtherMethod"
-    },
-    someOtherMethod : function(){
-      // do something here.
+      'new': 'showNewTapeForm',
+      'tape/:tape': 'showTape',
+      '*action': 'showBrowseTapes'
     }
   });
     

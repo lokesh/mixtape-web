@@ -12,8 +12,8 @@ $blue: #2da5c4
 $purple: #a083c8
 
 $offWhite: #f7f7f7
-$lightGray: #ccc
-$gray: #666
+$lightGray: #aaa
+$gray: #777
 $darkGray: #444
 
 $color: $darkGray
@@ -33,6 +33,17 @@ $borderColor: lighten($lightGray, 10%)
 $gutter: 20px
 $radius: 2px
 
+$headerHeight: 50px
+
+// FYI: You cannot use variables in media query declarations.
+//      This won't work: @media (min-width: $iphoneWidth)
+
+// ## Widths of common devices ##
+// iPhone portrait:   320px
+// iPhone landscape:  480px
+// iPad portrait:     768px
+// iPad landscape     1024px
+
 // -----------------------------------------------------------------------
 
 *
@@ -46,7 +57,8 @@ body,
 button,
 input
   font-family: "Open Sans", sans-serif
-  font-weight: 300
+  font-weight: 800
+  text-transform: uppercase
   font-size: 24px
 
 a
@@ -54,28 +66,100 @@ a
   text-decoration: none
 
 
-/* Tapes Header */
+/* Header */
 
-.tapes-header
-  height: 50px
-  line-height: 50px
+.app-header
+  position: fixed
+  width: 100%
+  height: $headerHeight
+  line-height: $headerHeight
   color: white
-  background: $blue
+  background: black
   text-align: center
+  letter-spacing: 1px
 
-/* Tapes List */
 
-.tapes-list
-  padding: $gutter/4 0 0 $gutter/4
-  .tape
+/* Content */
+
+.app-content
+  padding-top: $headerHeight
+
+
+/* Tapes */
+
+.tape-banner
+  padding: $gutter * 1.5 
+  margin: 0 $gutter/4 $gutter/4 0
+  background-color: $yellow
+  font-size: 36px
+  +ellipsis
+  &:hover
+    cursor: pointer
+
+.tracks
+  padding-top: 0 $gutter/4
+
+.track
+  padding: $gutter - 5 $gutter * 1.5 
+  margin-bottom: 2px
+  background-color: white
+
+.track-name
+  color: $darkGray
+  font-size: 24px
+  line-height: 1.3em
+  +ellipsis
+  
+.track-artist
+  color: $lightGray
+  font-size: 14px
+  font-weight: 700
+  line-height: 1.6em
+  +ellipsis
+
+
+/* Browse Tapes View */
+
+.tapes-browse
+  padding: $gutter/4
+  .tapes-list
+    +pie-clearfix
+    .tape-banner
+      float: left
+      font-style: italic
+      &:hover
+        background: $orange
+
+  .new-tape-button
     float: left
-    width: 25%
-    min-width: 320px
-    height: 100px
-    line-height: 100px
+    padding: $gutter * 1.5 
     margin: 0 $gutter/4 $gutter/4 0
-    background-color: $yellow
     font-size: 36px
+    line-height: 1em
     text-align: center
+    color: white
+    background: $lightGray
+    border: none
     &:hover
+      background: $green
       cursor: pointer
+
+
+/* Single Tape View */
+
+.tape
+  .tape-banner
+    margin-right: 0
+    margin-bottom: 2px
+    font-size: 48px
+
+
+@media (max-width: 640px)
+  /* Browse Tapes View */
+  .tapes-browse
+    .tapes-list
+      .tape-banner
+        float: none
+    .new-tape-button
+      float: none
+      width: 100%

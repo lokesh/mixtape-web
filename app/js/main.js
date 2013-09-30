@@ -18,14 +18,21 @@ require([
   'backbone',
   'router',
   'controller'
-  ], function(app, Backbone, Router, Controller) {
-  'use strict';
+  // 'modules/user_session'
+], function(app, Backbone, Router, controller) {
 
+  'use strict';
+  
   app.start();
   
-  // new Router({ controller: Controller });
+  app.controller = controller;
+  
+  app.router = new Router({
+    controller: app.controller
+  });
 
-  Backbone.history.start();
+  Backbone.history.start({
+    pushState: false
+  });
 
-  // console.log('App start');
 });

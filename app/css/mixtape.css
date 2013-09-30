@@ -2358,62 +2358,168 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   content: "\f18b";
 }
 
-/* line 38, ../sass/mixtape.sass */
+/* line 49, ../sass/mixtape.sass */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 41, ../sass/mixtape.sass */
+/* line 52, ../sass/mixtape.sass */
 body {
   background-color: #f7f7f7;
   color: #444444;
 }
 
-/* line 45, ../sass/mixtape.sass */
+/* line 56, ../sass/mixtape.sass */
 body,
 button,
 input {
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 800;
+  text-transform: uppercase;
   font-size: 24px;
 }
 
-/* line 52, ../sass/mixtape.sass */
+/* line 64, ../sass/mixtape.sass */
 a {
   color: #43b364;
   text-decoration: none;
 }
 
-/* Tapes Header */
-/* line 59, ../sass/mixtape.sass */
-.tapes-header {
+/* Header */
+/* line 71, ../sass/mixtape.sass */
+.app-header {
+  position: fixed;
+  width: 100%;
   height: 50px;
   line-height: 50px;
   color: white;
-  background: #2da5c4;
+  background: black;
   text-align: center;
+  letter-spacing: 1px;
 }
 
-/* Tapes List */
-/* line 68, ../sass/mixtape.sass */
-.tapes-list {
-  padding: 5px 0 0 5px;
+/* Content */
+/* line 84, ../sass/mixtape.sass */
+.app-content {
+  padding-top: 50px;
 }
-/* line 70, ../sass/mixtape.sass */
-.tapes-list .tape {
-  float: left;
-  width: 25%;
-  min-width: 320px;
-  height: 100px;
-  line-height: 100px;
+
+/* Tapes */
+/* line 90, ../sass/mixtape.sass */
+.tape-banner {
+  padding: 30px;
   margin: 0 5px 5px 0;
   background-color: #ffd366;
   font-size: 36px;
-  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
-/* line 80, ../sass/mixtape.sass */
-.tapes-list .tape:hover {
+/* line 96, ../sass/mixtape.sass */
+.tape-banner:hover {
   cursor: pointer;
+}
+
+/* line 99, ../sass/mixtape.sass */
+.tracks {
+  padding-top: 0 5px;
+}
+
+/* line 102, ../sass/mixtape.sass */
+.track {
+  padding: 15px 30px;
+  margin-bottom: 2px;
+  background-color: white;
+}
+
+/* line 107, ../sass/mixtape.sass */
+.track-name {
+  color: #444444;
+  font-size: 24px;
+  line-height: 1.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* line 113, ../sass/mixtape.sass */
+.track-artist {
+  color: #aaaaaa;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6em;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* Browse Tapes View */
+/* line 123, ../sass/mixtape.sass */
+.tapes-browse {
+  padding: 5px;
+}
+/* line 125, ../sass/mixtape.sass */
+.tapes-browse .tapes-list {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.tapes-browse .tapes-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 127, ../sass/mixtape.sass */
+.tapes-browse .tapes-list .tape-banner {
+  float: left;
+  font-style: italic;
+}
+/* line 130, ../sass/mixtape.sass */
+.tapes-browse .tapes-list .tape-banner:hover {
+  background: #ff7c4f;
+}
+/* line 133, ../sass/mixtape.sass */
+.tapes-browse .new-tape-button {
+  float: left;
+  padding: 30px;
+  margin: 0 5px 5px 0;
+  font-size: 36px;
+  line-height: 1em;
+  text-align: center;
+  color: white;
+  background: #aaaaaa;
+  border: none;
+}
+/* line 143, ../sass/mixtape.sass */
+.tapes-browse .new-tape-button:hover {
+  background: #43b364;
+  cursor: pointer;
+}
+
+/* Single Tape View */
+/* line 151, ../sass/mixtape.sass */
+.tape .tape-banner {
+  margin-right: 0;
+  margin-bottom: 2px;
+  font-size: 48px;
+}
+
+@media (max-width: 640px) {
+  /* Browse Tapes View */
+  /* line 161, ../sass/mixtape.sass */
+  .tapes-browse .tapes-list .tape-banner {
+    float: none;
+  }
+  /* line 163, ../sass/mixtape.sass */
+  .tapes-browse .new-tape-button {
+    float: none;
+    width: 100%;
+  }
 }
