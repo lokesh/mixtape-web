@@ -6,7 +6,7 @@
 // Colors
 $red: #ec5757
 $orange: #ff7c4f
-$yellow: #ffd366
+$yellow: #ffdf56
 $green: #43b364
 $blue: #2da5c4
 $purple: #a083c8
@@ -73,7 +73,7 @@ a
   width: 100%
   height: $headerHeight
   line-height: $headerHeight
-  color: white
+  color: $lightGray
   background: black
   text-align: center
   letter-spacing: 1px
@@ -153,6 +153,27 @@ a
     margin-bottom: 2px
     font-size: 48px
 
+
+/* New Tape Form */
+
+.new-tape-form
+  .name-input
+    width: 100%
+    padding: $gutter * 1.5 
+    border: none
+    background: transparent
+    font-size: 36px
+    text-align: center
+    &:hover
+      background-color: $yellow
+    &:focus
+      background-color: white
+      outline: none
+
+
+/* ------------- */
+/* Media Queries */
+/* ------------- */
 
 @media (max-width: 640px)
   /* Browse Tapes View */
