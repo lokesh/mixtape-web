@@ -1,0 +1,225 @@
+@import compass/reset
+@import compass/css3
+@import compass/utilities
+@import ../bower_components/components-font-awesome/scss/font-awesome
+
+// Colors
+$red: #ec5757
+$orange: #ff7c4f
+$yellow: #ffdf56
+$green: #43b364
+$blue: #2da5c4
+$purple: #a083c8
+
+$offWhite: #f3f3f3
+$lightGray: #aaa
+$gray: #777
+$darkGray: #444
+
+$color: $darkGray
+$tintColor: $green
+$bgColor: black
+$borderColor: lighten($lightGray, 10%)
+
+// Fonts
+// We're using Open Sans hosted by Google Fonts with the following weights:
+// * 300 Light
+// * 400 Normal
+// * 600 Semi-bold
+// * 700 Bold
+// * 800 Extra-bold
+
+// Layout
+$gutter: 20px
+
+$headerHeight: 50px
+
+// FYI: You cannot use variables in media query declarations.
+//      This won't work: @media (min-width: $iphoneWidth)
+
+// ## Widths of common devices ##
+// iPhone portrait:   320px
+// iPhone landscape:  480px
+// iPad portrait:     768px
+// iPad landscape     1024px
+
+// -----------------------------------------------------------------------
+
+*
+  +box-sizing(border-box)
+
+body
+  background-color: $bgColor
+  color: $color
+
+body,
+button,
+input
+  font-family: "Open Sans", sans-serif
+  font-weight: 800
+  text-transform: uppercase
+  font-size: 24px
+
+a
+  color: $green
+  text-decoration: none
+
+
+/* Header */
+
+.app-header
+  position: fixed
+  width: 100%
+  height: $headerHeight
+  line-height: $headerHeight
+  color: $lightGray
+  background: black
+  text-align: center
+  letter-spacing: 1px
+
+
+/* Content */
+
+.app-content
+  padding-top: $headerHeight
+
+
+/* Tapes */
+
+.tape-banner
+  padding: $gutter * 1.5 
+  margin-bottom: $gutter/5
+  background-color: $yellow
+  font-size: 30px
+  +ellipsis
+  &:hover
+    cursor: pointer
+
+.tracks
+  padding-top: 0 $gutter/4
+
+.track
+  padding: $gutter - 5 $gutter * 1.5 
+  border-bottom: 2px solid $offWhite
+  background-color: white
+
+.track-name
+  color: $darkGray
+  font-size: 24px
+  line-height: 1.3em
+  +ellipsis
+  
+.track-artist
+  color: $lightGray
+  font-size: 14px
+  font-weight: 700
+  line-height: 1.6em
+  +ellipsis
+
+
+/* Home View */
+
+.home-tabs
+  margin-bottom: $gutter/5
+  +pie-clearfix
+  .tab
+    float: left
+    width: 33%
+    &.tab-middle
+      width: 34%
+  .tab-link
+    display: block
+    height: 108px
+    padding: $gutter*1.5 0
+    margin-right: $gutter/5
+    text-align: center
+    &.single-line
+      padding-top: $gutter*2
+    &.on
+      background: white
+    &.off
+      color: white
+      background: $lightGray
+      &:hover
+        color: $color
+        background-color: $tintColor
+  .tab:last-of-type
+    .tab-link
+      margin-right: 0
+
+/* Browse Tapes View */
+
+.tapes-browse
+  .tapes-list
+    +pie-clearfix
+    .tape-banner
+      float: left
+      margin-right: $gutter/5
+      &:hover
+        color: black
+        background: $orange
+
+  .new-tape-button
+    float: left
+    padding: $gutter * 1.5 
+    margin: 0 $gutter/5 $gutter/5 0
+    font-size: 30px
+    line-height: 1em
+    text-align: center
+    color: white
+    background: $lightGray
+    border: none
+    &:hover
+      background: $green
+      cursor: pointer
+
+
+/* Single Tape View */
+
+.tape
+  .tape-banner
+    margin-right: 0
+    margin-bottom: 2px
+    font-size: 48px
+
+
+/* New Tape Form */
+
+.new-tape-form
+  .name-input
+    width: 100%
+    padding: $gutter * 1.5 
+    border: none
+    background-color: white
+    font-size: 36px
+    text-align: center
+    &:hover
+      background-color: $yellow
+    &:focus
+      background-color: white
+      outline: none
+
+.color-picker
+  height: 100px
+  width: 100%
+  overflow: hidden
+  .color-swatch
+    width: 100px
+    height: 100px
+    float: left
+
+/* ------------- */
+/* Media Queries */
+/* ------------- */
+
+@media (max-width: 640px)
+  /* Browse Tapes View */
+  .tapes-browse
+    .tapes-list
+      .tape-banner
+        float: none
+        margin-right: 0
+        text-align: center
+    .new-tape-button
+      float: none
+      width: 100%

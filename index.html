@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>MIXTAPE</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/mixtape.css">
+  </head>
+  <body>
+
+    <div id="app" class="app">
+      <section class="app-header">
+        Mixtape
+      </section>
+      <section class="app-content"></section>
+    </div>
+
+    <script id="home-template" type="text/template">
+      <nav class="home-tabs">
+        <ul>
+          <li class="tab"><a href="#" data-name="trending" class="tab-link single-line off">Trending!</a></li>
+          <li class="tab tab-middle"><a href="#" data-name="your-tapes" class="tab-link double-line off">Your<br />tapes</a></li>
+          <li class="tab"><a href="#" data-name="faves" class="tab-link single-line off">Faves</a></li>
+        </ul>
+      </nav>
+      <div class="home-tab-content"></div>
+      <div class="tapes-browse">
+        <button class="new-tape-button">+</button>
+        <span class="tapes-list"></span>
+      </div>
+    </script>
+
+    <script id="tape-banner-template" type="text/template">
+      <h1 class="tape-banner">
+        <%= name %>
+      </h1>
+    </script>
+    
+    <script id="tape-template" type="text/template">
+      <article class="tape">
+        <h1 class="tape-banner">
+          <%= name %>
+        </h1>
+        <section class="tracks"></section>
+      </article>
+    </script>
+
+    <script id="track-template" type="text/template">
+      <div class="track">
+        <h2 class="track-name">
+          <%= name %>
+        </h2>
+        <h3 class="track-artist">
+          <%= artist %>
+        </h3>
+      </div>
+    </script>
+
+    <script id="tape-new-template" type="text/template">
+      <div class="new-tape-form">
+        <input type="text" value="New Tape" value="name" class="name-input" />
+        <div class="new-tape-color-picker"></div>
+        <div class="new-tape-background-color-picker"></div>
+      </div>
+    </script>
+
+    <script data-main="js/main" src="bower_components/requirejs/require.js"></script>
+  </body>
+</html>
